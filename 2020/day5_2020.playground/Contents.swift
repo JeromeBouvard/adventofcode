@@ -22,14 +22,15 @@ for elements in plane_seat {
     let seat = 8*row!+column!
     list_of_seats.append(seat)
     if (seat > highest_seat) {
-        highest_seat = 8*row!+column!
+        highest_seat = seat
     }
+    //sort the list for part 2
     list_of_seats.sort()
-    
 }
 
 print("Highest value for seat : \(highest_seat)")
 
+//part 2
 for value in 0...list_of_seats.count-2{
     if list_of_seats[value+1]-list_of_seats[value] != 1 {
         print("Your seat is \(list_of_seats[value]+1)")
